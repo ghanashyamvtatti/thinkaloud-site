@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — ThinkAloud</title>
+  <meta name="description" content="Support, FAQ, and contact for ThinkAloud — the privacy-first, on-device AI note-taking app.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="../assets/icon.png" alt="">
+    <span class="name">ThinkAloud</span>
+    <nav>
+      <a href="../">Home</a>
+      <a href="./">Support</a>
+      <a href="../privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+<article>
+  <h1>Support</h1>
+  <p class="meta">Help with ThinkAloud for iOS, Android, and macOS</p>
+
+  <h2>Contact</h2>
+  <p>Questions, bug reports, and feature requests are handled through the public
+  issue tracker:</p>
+  <p><strong><a href="https://github.com/ghanashyamvtatti/thinkaloud-site/issues/new">Open a support request on GitHub</a></strong>
+  (a free GitHub account is required). We aim to respond within a few days.</p>
+  <div class="note">Please don't include anything private in an issue — issues are
+  publicly visible. Describe the problem, your device model, and OS version.</div>
+
+  <h2>Getting started</h2>
+  <ul>
+    <li><strong>First launch:</strong> ThinkAloud downloads its on-device AI model
+      (~2.4&nbsp;GB) once. You need roughly 3&nbsp;GB of free storage and a Wi-Fi
+      connection for the download.</li>
+    <li><strong>Capture:</strong> tap the microphone and speak naturally. The app
+      transcribes and structures your note — title, tags, and formatting — entirely
+      on the device.</li>
+    <li><strong>Photos:</strong> tap the camera icon to photograph a whiteboard or
+      document (long-press for the photo library). The image is turned into a
+      written note on-device.</li>
+    <li><strong>Your notes are files:</strong> every note is a plain Markdown file in
+      an Obsidian-compatible vault. On iOS the vault is visible in the Files app;
+      on Android and macOS you pick the folder.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Why is the app asking to download 2.4 GB?</h3>
+  <p>That's the Gemma AI model that powers transcription, tagging, and
+  "Ask your vault." It is downloaded once, stored locally, and is the reason
+  no audio or text ever needs to leave your device.</p>
+
+  <h3>Does ThinkAloud work offline?</h3>
+  <p>Yes. After the one-time model download, capture, transcription, search, and
+  Ask all work with no network connection. Only optional sync needs connectivity.</p>
+
+  <h3>How do I set up sync?</h3>
+  <p>Settings &rarr; <strong>Sync</strong>. Choose Google Drive (any platform) or
+  iCloud (Apple platforms). Sync writes your Markdown files to <em>your own</em>
+  cloud account — Google Drive uses a private app-created folder
+  (<code>My Drive &rsaquo; ThinkAloud</code>); iCloud uses the app's container,
+  visible in the Files app. We run no servers and never see your notes.</p>
+
+  <h3>Can I edit my notes in another app?</h3>
+  <p>Yes — that's the point. The vault is plain Markdown compatible with Obsidian
+  and any text editor. Wikilinks (<code>[[like this]]</code>), tags, and checklists
+  use standard syntax.</p>
+
+  <h3>Recording doesn't start / no transcription appears</h3>
+  <ul>
+    <li>Check the microphone permission in system settings.</li>
+    <li>Make sure the AI model finished downloading (Settings shows model status).</li>
+    <li>On-device inference needs a recent device; very old hardware may not be
+      able to run the model.</li>
+  </ul>
+
+  <h3>How do I delete my data?</h3>
+  <p>Your notes are local files — delete them in the app, in the Files app, or in
+  your vault folder. If sync is enabled, deletions propagate to your Drive/iCloud
+  copy (Drive deletions go to its Trash). Disconnecting sync in Settings removes the
+  stored sign-in token. See the <a href="../privacy/">privacy policy</a> for details.</p>
+
+  <h2>System requirements</h2>
+  <ul>
+    <li><strong>iOS:</strong> iOS 16 or later</li>
+    <li><strong>Android:</strong> a recent 64-bit device; ~3 GB free storage</li>
+    <li><strong>macOS:</strong> Apple Silicon recommended</li>
+  </ul>
+</article>
+</div>
+
+<footer class="site">
+  <nav class="wrap">
+    <a href="../">Home</a>
+    <a href="./">Support</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="https://github.com/ghanashyamvtatti/thinkaloud-site/issues">Contact</a>
+  </nav>
+  <div>&copy; 2026 ThinkAloud</div>
+</footer>
+
+</body>
+</html>

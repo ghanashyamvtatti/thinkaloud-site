@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThinkAloud features — capture, ask, link, sync</title>
+  <meta name="description" content="A tour of ThinkAloud's features with screenshots: voice and photo capture, lecture-length recordings, asking your vault with cited sources, the knowledge graph, vault health, sharing, and sync.">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/theme.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="../assets/icon.png" alt="">
+    <span class="name">ThinkAloud</span>
+    <nav>
+      <a href="../how/">How it works</a>
+      <a href="../features/">Features</a>
+      <a href="../support/">Support</a>
+      <a href="../privacy/">Privacy</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+<article>
+  <h1>Features</h1>
+  <p class="meta">Everything the app does, screen by screen. All of it runs on-device.</p>
+
+  <section class="feature-row">
+    <div class="feature-copy">
+      <span class="kicker">Capture</span>
+      <h2>Speak it, snap it, or type it</h2>
+      <p>The capture screen is the home screen — pick a style chip and go.
+      Templates shape the result: a <strong>Journal</strong> entry comes out as
+      flowing reflection, a <strong>Meeting</strong> as decisions and action items,
+      an <strong>Idea</strong> as a crisp summary with next steps. You can edit the
+      built-in templates or write your own.</p>
+      <ul>
+        <li><strong>Voice</strong> — talk naturally; filler words disappear, names and numbers don't</li>
+        <li><strong>Photo</strong> — whiteboards, documents, and slides become written notes</li>
+        <li><strong>Text</strong> — paste or type, same structuring pipeline</li>
+        <li><strong>Share sheet</strong> (Android) — send content from other apps</li>
+      </ul>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-01-capture.png" alt="Capture screen with template chips and the mic button" loading="lazy">
+      <figcaption>Capture, with template chips</figcaption>
+    </figure>
+  </section>
+
+  <section class="feature-row flip">
+    <div class="feature-copy">
+      <span class="kicker">Long-form</span>
+      <h2>Lecture-length recordings</h2>
+      <p>Record a class, a meeting, or a long walk-and-talk. ThinkAloud listens in
+      overlapping windows, builds a running understanding of the whole recording,
+      then writes one note in your selected style that covers all of it — with a
+      timestamped transcript below and the original audio embedded, playable
+      inside the note.</p>
+      <p>Processing runs in the background with a progress notification; the raw
+      recording is saved into the vault <em>before</em> processing starts, so even a
+      crash can't lose your audio.</p>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-05-note.png" alt="A structured note with checklists and tags" loading="lazy">
+      <figcaption>A finished note: structure, tags, checklists</figcaption>
+    </figure>
+  </section>
+
+  <section class="feature-row">
+    <div class="feature-copy">
+      <span class="kicker">Ask</span>
+      <h2>Question your own notes</h2>
+      <p>AI Chat answers from your vault, not from the internet. Ask by typing or
+      by voice; ask follow-ups; switch on <strong>Think mode</strong> when a question
+      needs a deeper search. Answers are grounded in retrieved excerpts of your
+      notes, and each one shows its <strong>Sources</strong> — tap a chip to open the
+      note behind the answer.</p>
+      <p>There's a per-note chat too: open any note and ask about it, or tell it
+      "change Friday to Monday" and watch the edit apply surgically.</p>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-03-ask.png" alt="AI chat screen answering from the vault" loading="lazy">
+      <figcaption>Ask — answers cite their sources</figcaption>
+    </figure>
+  </section>
+
+  <section class="feature-row flip">
+    <div class="feature-copy">
+      <span class="kicker">Connections</span>
+      <h2>A graph that draws itself</h2>
+      <p>Every capture gets a <code>## Related</code> section linking the existing
+      notes it overlaps — exact-title <code>[[wikilinks]]</code> the app verifies
+      against your vault, never links the model made up. The graph view shows the
+      result: clusters for your projects, your journal, your recipes, connected
+      where your thinking actually connects.</p>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-04-graph.png" alt="Knowledge graph view of linked notes" loading="lazy">
+      <figcaption>The knowledge graph</figcaption>
+    </figure>
+  </section>
+
+  <section class="feature-row">
+    <div class="feature-copy">
+      <span class="kicker">Library</span>
+      <h2>Browse, search, filter</h2>
+      <p>Full-text search across every note, instant tag filtering
+      (<code>#work</code>, <code>#recipe</code>), and a feed of recent notes on the
+      home screen. Notes open into a reader with tappable checklists, inline
+      images and audio, and rendered wikilinks — or flip to the editor for raw
+      Markdown with a formatting toolbar.</p>
+      <ul>
+        <li><strong>Vault health</strong> — find orphaned attachments, broken links, and untagged notes, each with a one-tap fix</li>
+        <li><strong>Share</strong> any note as Markdown or a rendered PDF — emoji included</li>
+      </ul>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-02-library.png" alt="Library screen with search and tag filters" loading="lazy">
+      <figcaption>The library: search and tags</figcaption>
+    </figure>
+  </section>
+
+  <section class="feature-row flip">
+    <div class="feature-copy">
+      <span class="kicker">Control</span>
+      <h2>Your model, your rules</h2>
+      <p>Settings exposes the machinery instead of hiding it. A live model picker
+      lists the on-device models <em>your</em> phone can actually run — including
+      NPU-optimized builds matched to your chip — with resumable downloads. Tune
+      the context window, sampling temperature, retrieval depth, emoji styling,
+      note language, and whether captures get the second polish pass.</p>
+      <p>Notes live in plain Markdown wherever you point the app: its own folder,
+      any folder you pick, or an existing Obsidian vault. Optional sync goes to
+      your own Google Drive or iCloud — the developer runs no servers.</p>
+    </div>
+    <figure class="phone">
+      <img src="../assets/shots/site-06-template.png" alt="Template editor showing an editable note style" loading="lazy">
+      <figcaption>Every built-in note style is editable</figcaption>
+    </figure>
+  </section>
+
+  <p style="margin-top: 28px;">Curious how it all fits together?
+  <a class="more-link" href="../how/">Read the explainer →</a></p>
+</article>
+</div>
+
+<footer class="site">
+  <nav class="wrap">
+    <a href="../">Home</a>
+    <a href="../how/">How it works</a>
+    <a href="../features/">Features</a>
+    <a href="../support/">Support</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="https://github.com/ghanashyamvtatti/thinkaloud-site/issues">Contact</a>
+  </nav>
+  <div>&copy; 2026 ThinkAloud</div>
+</footer>
+
+</body>
+</html>

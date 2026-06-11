@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ThinkAloud — Voice notes → smart Markdown. 100% on-device AI.</title>
+  <title>ThinkAloud — Talk. It writes the note. 100% on-device AI.</title>
   <meta name="description" content="ThinkAloud turns voice notes, photos, and quick thoughts into clean, organized Markdown notes — using AI that runs entirely on your device. No cloud processing, no subscriptions, no accounts.">
   <meta property="og:title" content="ThinkAloud">
-  <meta property="og:description" content="Voice notes → smart Markdown. 100% on-device AI.">
+  <meta property="og:description" content="Talk. It writes the note. 100% on-device AI.">
   <meta property="og:image" content="https://ghanashyamvtatti.github.io/thinkaloud-site/assets/icon.png">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
@@ -20,6 +20,8 @@
     <img src="assets/icon.png" alt="">
     <span class="name">ThinkAloud</span>
     <nav>
+      <a href="how/">How it works</a>
+      <a href="features/">Features</a>
       <a href="support/">Support</a>
       <a href="privacy/">Privacy</a>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
@@ -30,49 +32,99 @@
 <section class="hero">
   <div class="wrap">
     <img class="icon" src="assets/icon.png" alt="ThinkAloud app icon">
-    <h1>ThinkAloud</h1>
-    <p class="tagline">Speak your mind. Voice notes &rarr; smart Markdown.<br>
-    <strong>100% on-device AI.</strong></p>
+    <h1>Talk. It writes the note.</h1>
+    <p class="tagline">ThinkAloud turns spoken thoughts, photos, and long recordings
+    into clean Markdown notes — with AI that runs <strong>entirely on your phone</strong>.</p>
+    <p class="sub">No cloud processing. No subscription. No account. Your notes are
+    plain files in a folder you control, and the model that writes them never
+    sees the internet.</p>
     <div class="badges">
       <span class="badge">Coming soon to the App&nbsp;Store</span>
       <span class="badge">Coming soon to Google&nbsp;Play</span>
+    </div>
+
+    <div class="shots">
+      <figure class="phone">
+        <img src="assets/shots/site-01-capture.png" alt="Capture screen with template picker and recent notes" loading="lazy">
+        <figcaption>Pick a style, hit the mic, talk.</figcaption>
+      </figure>
+      <figure class="phone">
+        <img src="assets/shots/site-05-note.png" alt="A finished note with checklists, tags, and related links" loading="lazy">
+        <figcaption>A finished note — structure included.</figcaption>
+      </figure>
+      <figure class="phone">
+        <img src="assets/shots/site-04-graph.png" alt="Knowledge graph of linked notes" loading="lazy">
+        <figcaption>Notes link themselves into a graph.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <div class="wrap">
-  <section class="features">
-    <div class="card">
-      <span class="emoji">🎙️</span>
-      <h3>Voice-first capture</h3>
-      <p>Talk naturally — a quick thought or an hour-long lecture — and get a structured note in your chosen style, with a title, tags, and formatting.</p>
+
+  <section class="home-section">
+    <span class="kicker">How it works</span>
+    <h2>From rambling to readable in three steps</h2>
+  </section>
+  <section class="steps">
+    <div class="step">
+      <h3>Record anything</h3>
+      <p>A ten-second thought, a whiteboard photo, or a two-hour lecture.
+      Pick a note style first — Journal, Meeting, Idea, or your own.</p>
     </div>
-    <div class="card">
-      <span class="emoji">🔒</span>
-      <h3>100% on-device AI</h3>
-      <p>Powered by Google's Gemma model running locally. Your audio never leaves your device.</p>
+    <div class="step">
+      <h3>The AI writes — on your phone</h3>
+      <p>Google's Gemma model, running locally, transcribes and structures it:
+      a real title, topic tags, headings, checklists where they belong.</p>
     </div>
-    <div class="card">
-      <span class="emoji">📷</span>
-      <h3>Photos &rarr; notes</h3>
-      <p>Capture a whiteboard or document with the camera and get a written note.</p>
-    </div>
-    <div class="card">
-      <span class="emoji">📁</span>
-      <h3>Your files, your format</h3>
-      <p>Notes are plain Markdown in an Obsidian-compatible vault you can open with any editor.</p>
-    </div>
-    <div class="card">
-      <span class="emoji">🧠</span>
-      <h3>A real second brain</h3>
-      <p>Checklists, tags, wikilinks, full-text search, a knowledge graph — and "Ask your vault" with voice questions, follow-ups, and a deeper Think mode, all answered locally.</p>
-    </div>
-    <div class="card">
-      <span class="emoji">☁️</span>
-      <h3>Optional sync to YOUR cloud</h3>
-      <p>Google Drive (a private folder the app alone created) or iCloud. Strictly your account; we run no servers.</p>
+    <div class="step">
+      <h3>It files itself</h3>
+      <p>The note lands as plain Markdown in your vault and links itself to
+      the related notes you already have. The graph grows on its own.</p>
     </div>
   </section>
+  <p style="margin: 0 0 28px;"><a class="more-link" href="how/">Read the full explainer →</a></p>
+
+  <section class="home-section">
+    <span class="kicker">Features</span>
+    <h2>A complete thinking tool, not just a recorder</h2>
+  </section>
+  <section class="features" style="padding-top: 24px;">
+    <div class="card">
+      <h3>Voice-first capture</h3>
+      <p>Short thoughts or hour-long lectures both come out as structured notes
+      in your chosen style. Long recordings keep a timestamped transcript and
+      the original audio.</p>
+    </div>
+    <div class="card">
+      <h3>Ask your vault</h3>
+      <p>Question your own notes conversationally — by typing or speaking.
+      Answers cite their sources: tap a chip to open the note an answer
+      came from.</p>
+    </div>
+    <div class="card">
+      <h3>Photos become notes</h3>
+      <p>Point the camera at a whiteboard, a document, or a slide and get a
+      written, searchable note.</p>
+    </div>
+    <div class="card">
+      <h3>Plain files, your folder</h3>
+      <p>Notes are Markdown in an Obsidian-compatible vault. Open them with any
+      editor, point the app at an existing vault, or let it manage its own.</p>
+    </div>
+    <div class="card">
+      <h3>Notes that find each other</h3>
+      <p>Every capture is linked to the related notes you already have —
+      exact-title wikilinks the app verifies, never invented ones. That's
+      what builds the knowledge graph.</p>
+    </div>
+    <div class="card">
+      <h3>Sync to your cloud, optionally</h3>
+      <p>Google Drive or iCloud — strictly your account, in a private folder
+      the app created. We run no servers at all.</p>
+    </div>
+  </section>
+  <p style="margin: -20px 0 40px;"><a class="more-link" href="features/">See every feature with screenshots →</a></p>
 
   <section class="strip">
     <h2>Private by architecture</h2>
@@ -85,6 +137,8 @@
 <footer class="site">
   <nav class="wrap">
     <a href="./">Home</a>
+    <a href="how/">How it works</a>
+    <a href="features/">Features</a>
     <a href="support/">Support</a>
     <a href="privacy/">Privacy Policy</a>
     <a href="https://github.com/ghanashyamvtatti/thinkaloud-site/issues">Contact</a>

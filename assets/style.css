@@ -135,9 +135,27 @@ header.site .wrap {
 }
 header.site img { width: 32px; height: 32px; border-radius: 8px; }
 header.site .name { font-weight: 700; font-size: 1.05rem; color: var(--text); }
-header.site nav { margin-left: auto; display: flex; gap: 18px; align-items: center; }
-header.site nav a { color: var(--text-dim); font-size: 0.95rem; }
+header.site nav { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+/* Padding keeps each link at a ≥24px target (WCAG 2.5.8). */
+header.site nav a { color: var(--text-dim); font-size: 0.95rem; padding: 6px 4px; }
 header.site nav a:hover { color: var(--primary); text-decoration: none; }
+/* You-are-here state (WCAG 4.1.2 via aria-current; NN/g visibility of status). */
+header.site nav a[aria-current="page"] { color: var(--primary); font-weight: 600; }
+
+/* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────── */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--primary); color: var(--bg);
+  padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+/* ── Visible keyboard focus (WCAG 2.4.7) ──────────────────── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 /* ── Theme toggle ─────────────────────────────────────────── */
 .theme-toggle {

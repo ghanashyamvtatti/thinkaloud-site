@@ -11,24 +11,24 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site">
   <div class="wrap">
     <img src="../assets/icon.png" alt="">
     <span class="name">ThinkAloud</span>
-    <nav>
+    <nav aria-label="Main">
       <a href="../">Home</a>
-    <a href="../how/">How it works</a>
-    <a href="../features/">Features</a>
       <a href="../how/">How it works</a>
       <a href="../features/">Features</a>
-      <a href="./">Support</a>
+      <a href="./" aria-current="page">Support</a>
       <a href="../privacy/">Privacy</a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dark mode" aria-pressed="false"><span class="sun">☀️</span><span class="moon">🌙</span></button>
     </nav>
   </div>
 </header>
 
-<div class="wrap">
+<main id="main" class="wrap">
 <article>
   <h1>Support</h1>
   <p class="meta">Help with ThinkAloud for iOS, Android, and macOS</p>
@@ -46,9 +46,10 @@
     <li><strong>First launch:</strong> ThinkAloud downloads its on-device AI model
       (~2.4&nbsp;GB) once. You need roughly 3&nbsp;GB of free storage and a Wi-Fi
       connection for the download.</li>
-    <li><strong>Capture:</strong> tap the microphone and speak naturally. The app
-      transcribes and structures your note — title, tags, and formatting — entirely
-      on the device.</li>
+    <li><strong>Capture:</strong> tap the microphone and speak naturally — the
+      screen stays awake while you record. Tap the stop button when you're done,
+      review the take (play it back, keep it or discard it), and the app writes
+      the note — title, tags, and formatting — entirely on the device.</li>
     <li><strong>Photos:</strong> tap the camera icon to photograph a whiteboard or
       document (long-press for the photo library). The image is turned into a
       written note on-device.</li>
@@ -101,11 +102,13 @@
     <li><strong>macOS:</strong> Apple Silicon recommended</li>
   </ul>
 </article>
-</div>
+</main>
 
 <footer class="site">
   <nav class="wrap">
     <a href="../">Home</a>
+    <a href="../how/">How it works</a>
+    <a href="../features/">Features</a>
     <a href="./">Support</a>
     <a href="../privacy/">Privacy Policy</a>
     <a href="https://github.com/ghanashyamvtatti/thinkaloud-site/issues">Contact</a>

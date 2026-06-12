@@ -15,20 +15,24 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site">
   <div class="wrap">
     <img src="assets/icon.png" alt="">
     <span class="name">ThinkAloud</span>
-    <nav>
+    <nav aria-label="Main">
+      <a href="./" aria-current="page">Home</a>
       <a href="how/">How it works</a>
       <a href="features/">Features</a>
       <a href="support/">Support</a>
       <a href="privacy/">Privacy</a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dark mode" aria-pressed="false"><span class="sun">☀️</span><span class="moon">🌙</span></button>
     </nav>
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
   <div class="wrap">
     <img class="icon" src="assets/icon.png" alt="ThinkAloud app icon">
@@ -93,8 +97,9 @@
     <div class="card">
       <h3>Voice-first capture</h3>
       <p>Short thoughts or hour-long lectures both come out as structured notes
-      in your chosen style. Long recordings keep a timestamped transcript and
-      the original audio.</p>
+      in your chosen style — and you review every take before the AI writes,
+      so a bad recording costs nothing. Long recordings keep a timestamped
+      transcript and the original audio.</p>
     </div>
     <div class="card">
       <h3>Ask your vault</h3>
@@ -133,6 +138,7 @@
     Read the <a href="privacy/">privacy policy</a>.</p>
   </section>
 </div>
+</main>
 
 <footer class="site">
   <nav class="wrap">

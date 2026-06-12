@@ -11,21 +11,24 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site">
   <div class="wrap">
     <img src="../assets/icon.png" alt="">
     <span class="name">ThinkAloud</span>
-    <nav>
+    <nav aria-label="Main">
+      <a href="../">Home</a>
       <a href="../how/">How it works</a>
-      <a href="../features/">Features</a>
+      <a href="./" aria-current="page">Features</a>
       <a href="../support/">Support</a>
       <a href="../privacy/">Privacy</a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dark mode" aria-pressed="false"><span class="sun">☀️</span><span class="moon">🌙</span></button>
     </nav>
   </div>
 </header>
 
-<div class="wrap">
+<main id="main" class="wrap">
 <article>
   <h1>Features</h1>
   <p class="meta">Everything the app does, screen by screen. All of it runs on-device.</p>
@@ -44,6 +47,8 @@
         <li><strong>Photo</strong> — whiteboards, documents, and slides become written notes</li>
         <li><strong>Text</strong> — paste or type, same structuring pipeline</li>
         <li><strong>Share sheet</strong> (Android) — send content from other apps</li>
+        <li><strong>Review first</strong> — stop, play the take back, then create
+          the note or discard it; nothing is processed until you decide</li>
       </ul>
     </div>
     <figure class="phone">
@@ -61,9 +66,10 @@
       then writes one note in your selected style that covers all of it — with a
       timestamped transcript below and the original audio embedded, playable
       inside the note.</p>
-      <p>Processing runs in the background with a progress notification; the raw
-      recording is saved into the vault <em>before</em> processing starts, so even a
-      crash can't lose your audio.</p>
+      <p>The screen stays awake while you record. On Android, processing then
+      continues in the background with a progress notification; on iOS the screen
+      stays awake while it finishes. The raw recording is saved into the vault
+      <em>before</em> processing starts, so even a crash can't lose your audio.</p>
     </div>
     <figure class="phone">
       <img src="../assets/shots/site-05-note.png" alt="A structured note with checklists and tags" loading="lazy">
@@ -110,8 +116,11 @@
       <span class="kicker">Library</span>
       <h2>Browse, search, filter</h2>
       <p>Full-text search across every note, instant tag filtering
-      (<code>#work</code>, <code>#recipe</code>), and a feed of recent notes on the
-      home screen. Notes open into a reader with tappable checklists, inline
+      (<code>#work</code>, <code>#recipe</code>), and the five most recent notes on
+      the home screen. Library and home share the same rich cards — voice notes
+      show their waveform, photo notes a thumbnail — and the timeline follows each
+      note's own capture date, so syncing across devices never reshuffles it.
+      Notes open into a reader with tappable checklists, inline
       images and audio, and rendered wikilinks — or flip to the editor for raw
       Markdown with a formatting toolbar.</p>
       <ul>
@@ -147,7 +156,7 @@
   <p style="margin-top: 28px;">Curious how it all fits together?
   <a class="more-link" href="../how/">Read the explainer →</a></p>
 </article>
-</div>
+</main>
 
 <footer class="site">
   <nav class="wrap">

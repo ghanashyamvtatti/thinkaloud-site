@@ -11,21 +11,24 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site">
   <div class="wrap">
     <img src="../assets/icon.png" alt="">
     <span class="name">ThinkAloud</span>
-    <nav>
-      <a href="../how/">How it works</a>
+    <nav aria-label="Main">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">How it works</a>
       <a href="../features/">Features</a>
       <a href="../support/">Support</a>
       <a href="../privacy/">Privacy</a>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dark mode" aria-pressed="false"><span class="sun">☀️</span><span class="moon">🌙</span></button>
     </nav>
   </div>
 </header>
 
-<div class="wrap">
+<main id="main" class="wrap">
 <article>
   <h1>How ThinkAloud works</h1>
   <p class="meta">The whole pipeline, in plain language.</p>
@@ -45,7 +48,10 @@
   <strong>Meeting</strong>, <strong>Idea</strong>, <strong>Reference</strong>, or a
   template you wrote yourself — then hit the mic and talk naturally, "um"s and
   false starts included. You can also snap a photo (a whiteboard, a document, a
-  slide) or type a quick line of text.</p>
+  slide) or type a quick line of text. The screen stays awake for the whole
+  take, and the mic button becomes a stop button while you record — tap it and
+  you can <strong>play the recording back</strong> before deciding: turn it into
+  a note, or discard it. Nothing is processed until you say so.</p>
   <p>The model hears the audio directly — it isn't a transcription bolted onto a
   chatbot — so it keeps names, numbers, and dates while dropping the disfluencies.
   A second polish pass tidies the structure. You preview the note, edit it if you
@@ -58,9 +64,11 @@
   ThinkAloud processes it the way a person would: it listens in overlapping
   segments, keeps a running understanding of the whole talk, and at the end writes
   <em>one</em> note in your selected style covering everything — followed by a
-  timestamped transcript and the original audio, embedded and playable. Processing
-  continues in the background; you can keep using the app (or your phone) while
-  it works.</p>
+  timestamped transcript and the original audio, embedded and playable. On Android,
+  processing keeps running in the background with a progress notification — you
+  can use other apps while it works. On iOS the screen stays awake while
+  ThinkAloud finishes in the foreground. Either way, you're notified the moment
+  the note is ready.</p>
 
   <h2>Notes that organize themselves</h2>
   <p>Every saved note is plain Markdown with YAML frontmatter, stored in a folder
@@ -107,7 +115,7 @@
 
   <p style="margin-top: 36px;"><a class="more-link" href="../features/">See every feature, with screenshots →</a></p>
 </article>
-</div>
+</main>
 
 <footer class="site">
   <nav class="wrap">

@@ -18,4 +18,18 @@ function toggleTheme() {
   var next = dark ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
   try { localStorage.setItem('theme', next); } catch (e) {}
+  syncThemeToggle();
 }
+
+// Reflect the effective state on the toggle (aria-pressed = dark mode on),
+// so assistive tech hears "Dark mode, toggle button, pressed" (WCAG 4.1.2).
+function syncThemeToggle() {
+  var btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  var current = document.documentElement.getAttribute('data-theme');
+  var dark = current
+    ? current === 'dark'
+    : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  btn.setAttribute('aria-pressed', String(dark));
+}
+document.addEventListener('DOMContentLoaded', syncThemeToggle);

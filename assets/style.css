@@ -281,7 +281,39 @@ footer.site nav { margin-bottom: 10px; display: flex; gap: 20px; justify-content
 @media (max-width: 600px) {
   .hero h1 { font-size: 2.3rem; }
   .hero p.tagline { font-size: 1.1rem; }
-  header.site nav { gap: 12px; }
+}
+
+/* ── Small screens: stack the header ──────────────────────────
+   Brand on the first row (theme toggle pinned to its right), nav links on
+   a full-width second row. The nav strip scroll-overflows on very narrow
+   screens instead of clipping links off the edge. */
+@media (max-width: 640px) {
+  header.site .wrap {
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 10px; padding-bottom: 8px;
+    row-gap: 2px;
+  }
+  header.site nav {
+    margin-left: 0;
+    flex-basis: 100%;
+    gap: 2px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  header.site nav::-webkit-scrollbar { display: none; }
+  header.site nav a {
+    white-space: nowrap;
+    font-size: 0.88rem;
+    padding: 8px 5px;
+  }
+  header.site nav a:first-child { padding-left: 0; }
+  header.site .theme-toggle {
+    position: absolute;
+    top: 9px; right: 24px;
+    width: 34px; height: 34px;
+  }
 }
 
 /* ── Hero CTA + screenshot strip ──────────────────────────── */

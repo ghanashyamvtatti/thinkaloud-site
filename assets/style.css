@@ -381,6 +381,28 @@ footer.site nav { margin-bottom: 10px; display: flex; gap: 20px; justify-content
   font-size: 0.85rem; margin-top: 10px;
 }
 .shots .phone:nth-child(2) { transform: translateY(20px); }
+
+/* ── macOS desktop screenshots ─────────────────────────────── */
+.desktop { margin: 36px auto 0; max-width: 920px; padding: 0 12px; }
+.desktop img {
+  width: 100%; height: auto; display: block;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 24px 70px var(--icon-glow);
+  background: var(--glass-strong);
+}
+.desktop figcaption {
+  text-align: center; color: var(--text-dim);
+  font-size: 0.85rem; margin-top: 12px;
+}
+.desktop-section { padding: 28px 0 8px; text-align: center; }
+.desktop-section .feature-copy { max-width: 720px; margin: 0 auto; }
+.desktop-pair {
+  display: flex; gap: 22px; justify-content: center;
+  align-items: flex-start; flex-wrap: wrap; margin-top: 24px;
+}
+.desktop-pair .desktop { max-width: 540px; flex: 1 1 440px; margin: 0; }
+
 @media (max-width: 600px) {
   .shots .phone:nth-child(2) { transform: none; }
   .phone { max-width: 78%; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How ThinkAloud works — on-device AI note-taking, explained</title>
-  <meta name="description" content="What ThinkAloud does and how it does it: voice and photo capture, an on-device Gemma model, Markdown vaults, automatic note linking, and asking questions of your own notes — all without a server.">
+  <meta name="description" content="What ThinkAloud does and how it does it: voice and photo capture, on-device AI (a Parakeet speech model + the Gemma language model), Markdown vaults, automatic note linking, and asking questions of your own notes — all without a server.">
   <link rel="icon" type="image/png" href="../assets/icon.png">
   <link rel="stylesheet" href="../assets/style.css?v=2">
   <script src="../assets/theme.js?v=2"></script>
@@ -52,17 +52,20 @@
   take, and the mic button becomes a stop button while you record — tap it and
   you can <strong>play the recording back</strong> before deciding: turn it into
   a note, or discard it. Nothing is processed until you say so.</p>
-  <p>The model hears the audio directly — it isn't a transcription bolted onto a
-  chatbot — so it keeps names, numbers, and dates while dropping the disfluencies.
-  A second polish pass tidies the structure. You preview the note, edit it if you
+  <p>A dedicated on-device speech model — NVIDIA's <strong>Parakeet</strong> —
+  turns the audio into text fast and faithfully, keeping names, numbers, and
+  dates, and labeling who said what in multi-voice recordings. The Gemma
+  language model then writes the note, dropping the disfluencies; a second
+  polish pass tidies the structure. You preview the note, edit it if you
   like, and save. If what you said overlaps a note you already have, ThinkAloud
   notices and offers to <strong>extend the existing note</strong> instead of creating
   a near-duplicate.</p>
 
   <h2>Long recordings</h2>
   <p>An hour-long lecture doesn't fit through a phone-sized model in one pass, so
-  ThinkAloud processes it the way a person would: it listens in overlapping
-  segments, keeps a running understanding of the whole talk, and at the end writes
+  ThinkAloud processes it the way a person would: the speech model transcribes
+  live while you record, the language model keeps a running understanding of the
+  whole talk in overlapping segments, and at the end it writes
   <em>one</em> note in your selected style covering everything — followed by a
   timestamped transcript and the original audio, embedded and playable. On Android,
   processing keeps running in the background with a progress notification — you
@@ -91,15 +94,20 @@
   and a deeper <strong>Think mode</strong> expands the search for harder questions.</p>
 
   <h2>What "on-device" actually means</h2>
-  <p>On first run, ThinkAloud downloads Google's <strong>Gemma&nbsp;4&nbsp;E2B</strong>
-  model (about 3&nbsp;GB) from Hugging Face and stores it locally — that download is
-  the only large transfer the app ever makes. From then on, transcription,
-  writing, tagging, search, and chat all run via
+  <p>On first run, ThinkAloud downloads two models from Hugging Face and stores
+  them locally: Google's <strong>Gemma&nbsp;4&nbsp;E2B</strong> language model
+  (about 3&nbsp;GB) and NVIDIA's <strong>Parakeet</strong> speech-recognition
+  model (about 0.7&nbsp;GB) — those downloads are the only large transfers the
+  app ever makes. From then on, transcription runs via
+  <a href="https://github.com/k2-fsa/sherpa-onnx">sherpa-onnx</a>, and writing,
+  tagging, search, and chat run via
   <a href="https://github.com/google-ai-edge/LiteRT-LM">LiteRT-LM</a> on your
   device's GPU (or NPU on supported devices). A model picker in Settings shows
-  alternative models your specific device can run.</p>
-  <div class="note">Practical requirements: roughly 3&nbsp;GB of free storage for
-  the model and a reasonably recent device. Newer devices process faster; the
+  alternative language models your specific device can run, and a toggle can
+  hand transcription to Gemma instead — much slower, but it understands
+  languages beyond the speech model's English.</p>
+  <div class="note">Practical requirements: roughly 4&nbsp;GB of free storage for
+  the models and a reasonably recent device. Newer devices process faster; the
   feature set is identical.</div>
 
   <h2>Sync, if you want it</h2>

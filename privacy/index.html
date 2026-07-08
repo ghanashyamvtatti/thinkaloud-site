@@ -45,12 +45,14 @@
 
   <h2>2. How your content is processed</h2>
   <p>All AI processing — turning speech into notes, suggesting tags, reading photos,
-  and answering questions about your notes — happens <strong>on your device</strong>,
-  using Google's Gemma model running locally via LiteRT. Audio recordings, photos,
-  and note text are never uploaded for processing.</p>
-  <p>On first use the app downloads the AI model file (~2.4&nbsp;GB) over an encrypted
-  connection. This is a one-time download of the model itself; no personal data is
-  sent with the request.</p>
+  and answering questions about your notes — happens <strong>on your device</strong>:
+  speech recognition uses NVIDIA's Parakeet model running locally via sherpa-onnx,
+  and note writing uses Google's Gemma model running locally via LiteRT. Audio
+  recordings, photos, and note text are never uploaded for processing.</p>
+  <p>On first use the app downloads the AI model files (~2.4&nbsp;GB for Gemma and
+  ~0.7&nbsp;GB for the speech models) over an encrypted connection. These are
+  one-time downloads of the models themselves; no personal data is sent with the
+  requests.</p>
 
   <h2>3. Where your notes live</h2>
   <p>Notes are plain Markdown files stored in a vault folder on your device. On iOS
@@ -128,6 +130,11 @@
   <a href="https://ai.google.dev/gemma/terms">Gemma Terms of Use</a> and is subject
   to the <a href="https://ai.google.dev/gemma/prohibited_use_policy">Gemma
   Prohibited Use Policy</a>. Gemma is a trademark of Google&nbsp;LLC.</p>
+  <p>Speech recognition runs NVIDIA's <strong>Parakeet-TDT&nbsp;0.6B</strong> model
+  (<a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>),
+  with optional speaker-diarization models (pyannote segmentation, MIT; NVIDIA
+  TitaNet, CC&nbsp;BY&nbsp;4.0), all executed locally via
+  <a href="https://github.com/k2-fsa/sherpa-onnx">sherpa-onnx</a> (Apache&nbsp;2.0).</p>
 
   <h2>10. Contact</h2>
   <p>Privacy questions can be raised on the public

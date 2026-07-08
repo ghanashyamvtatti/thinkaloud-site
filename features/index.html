@@ -61,8 +61,9 @@
     <div class="feature-copy">
       <span class="kicker">Long-form</span>
       <h2>Lecture-length recordings</h2>
-      <p>Record a class, a meeting, or a long walk-and-talk. ThinkAloud listens in
-      overlapping windows, builds a running understanding of the whole recording,
+      <p>Record a class, a meeting, or a long walk-and-talk. A dedicated speech
+      model (NVIDIA Parakeet) transcribes live as you record — labeling who said
+      what — while the AI builds a running understanding of the whole recording,
       then writes one note in your selected style that covers all of it — with a
       timestamped transcript below and the original audio embedded, playable
       inside the note.</p>
@@ -142,7 +143,9 @@
       lists the on-device models <em>your</em> device can actually run — including
       NPU-optimized builds matched to your chip — with resumable downloads. Tune
       the context window, sampling temperature, retrieval depth, emoji styling,
-      note language, and whether captures get the second polish pass.</p>
+      note language, and whether captures get the second polish pass. Prefer
+      Gemma for transcription — say, for non-English audio? One toggle
+      switches (much slower).</p>
       <p>Notes live in plain Markdown wherever you point the app: its own folder,
       any folder you pick, or an existing Obsidian vault. Optional sync goes to
       your own Google Drive or iCloud — the developer runs no servers.</p>

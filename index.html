@@ -180,25 +180,24 @@
   </section>
 
   <section class="strip" id="changelog">
-    <h2>What's new in 1.0.4</h2>
+    <h2>What's new in 1.1.1</h2>
     <p>Everything still runs <strong>100% on your device</strong> — your notes and
     audio never leave it.</p>
     <ul style="max-width: 640px; margin: 16px auto 0; text-align: left; line-height: 1.6;">
-      <li><strong>More accurate links &amp; search</strong> — a new hybrid keyword +
-      on-device semantic engine surfaces the right notes for Related links,
-      <code>[[wikilinks]]</code>, and search.</li>
-      <li><strong>Think mode</strong> for deeper, step-by-step reasoning, plus a
-      <strong>live model picker</strong> matched to your device's RAM and chip —
-      including the latest Gemma.</li>
-      <li><strong>Review recordings before processing</strong>, with a clearer stop
-      control and the screen staying awake while you record.</li>
-      <li><strong>Pin</strong> and <strong>share</strong> notes; a
-      <strong>reviewable “replace all”</strong> you approve before it's applied.</li>
-      <li><strong>Use any folder as your vault</strong> on Android — Obsidian-compatible,
-      with no special storage permissions.</li>
-      <li><strong>Reliability &amp; accessibility</strong> — many rare data-loss edge
-      cases fixed, plus a thorough screen-reader, large-text, reduced-motion, and
-      touch-target pass.</li>
+      <li><strong>Live transcription when adding to a note</strong> — recording into
+      an existing note now shows your words as you speak, and the take is merged
+      faster because it's already transcribed by the time you stop.</li>
+      <li><strong>Silent recordings stay silent</strong> — an empty or silent take
+      no longer turns into a made-up note; ThinkAloud says nothing was heard
+      instead of letting the AI guess.</li>
+      <li><strong>Hardened on-device AI</strong> — recordings, shared text, and note
+      content are sanitized before they reach the model, so content that tries to
+      give it instructions is captured as text — never obeyed.</li>
+      <li><strong>Fewer accidental discards</strong> — cancelling a recording you're
+      adding to a note now asks for confirmation first.</li>
+      <li><strong>From 1.1.0: much faster transcription by default</strong> — a
+      dedicated on-device speech model (NVIDIA Parakeet) with speaker labels, and
+      no more 1-minute cap when adding a recording to a note.</li>
     </ul>
   </section>
 
